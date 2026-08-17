@@ -24,7 +24,7 @@ export function ShopLayout() {
       <Header />
       <Navbar />
 
-      <div className="mx-auto flex max-w-6xl gap-6 px-4 py-8 sm:px-6">
+      <div className="mx-auto flex max-w-7xl gap-6 px-4 py-8 sm:px-6">
         <Sidebar categoriaAtivaId={categoriaId} />
 
         <div className="min-w-0 flex-1">
