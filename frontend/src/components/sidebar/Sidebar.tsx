@@ -12,7 +12,7 @@ export default function Sidebar({ categoriaAtivaId }: SidebarProps) {
   }
 
   return (
-    <aside className="flex w-64 shrink-0 flex-col justify-between rounded-xl border border-stone-200 bg-white">
+    <aside className="flex w-64 h-fit shrink-0 flex-col justify-between rounded-xl border border-stone-200 bg-white">
       <div>
         <AssistenteIACard onFalarComIA={falarComIA} />
         <CategoriasNav categoriaAtivaId={categoriaAtivaId} />

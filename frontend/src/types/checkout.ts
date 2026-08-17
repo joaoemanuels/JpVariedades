@@ -27,4 +27,5 @@ export interface ItemResumoCheckout {
   imagem: string;
   preco: number;
   quantidade: number;
+  prontaEntrega: boolean;
 }

@@ -1,16 +1,16 @@
 import { useState } from "react";
-import type { ItemResumoCheckout } from "../../components/checkout/ResumoPedidoCheckout";
-import type { OpcaoFrete } from "../../components/checkout/OpcoesFrete";
-import type { EnderecoForm } from "../../components/checkout/EnderecoEntrega";
-import type {
-  CartaoForm,
-  MetodoPagamento,
-} from "../../components/checkout/Pagamento";
+import type { MetodoPagamento } from "../../components/checkout/Pagamento";
 import ResumoPedidoCheckout from "../../components/checkout/ResumoPedidoCheckout";
 import EnderecoEntrega from "../../components/checkout/EnderecoEntrega";
 import OpcoesFrete from "../../components/checkout/OpcoesFrete";
 import Pagamento from "../../components/checkout/Pagamento";
 import CheckoutLayout from "../../components/checkout/CheckoutLayout";
+import type {
+  CartaoForm,
+  EnderecoForm,
+  ItemResumoCheckout,
+  OpcaoFrete,
+} from "../../types/checkout";
 
 const itensPedido: ItemResumoCheckout[] = [
   {
@@ -19,6 +19,7 @@ const itensPedido: ItemResumoCheckout[] = [
     imagem: "https://placehold.co/100x100/e8ddd3/7c2d12?text=Vaso",
     preco: 129.9,
     quantidade: 1,
+    prontaEntrega: true,
   },
   {
     id: "2",
@@ -26,6 +27,7 @@ const itensPedido: ItemResumoCheckout[] = [
     imagem: "https://placehold.co/100x100/e8ddd3/7c2d12?text=Castiçais",
     preco: 99.0,
     quantidade: 2,
+    prontaEntrega: false,
   },
 ];
 

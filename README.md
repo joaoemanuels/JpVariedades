@@ -28,8 +28,6 @@ O jpvariedades é uma loja virtual com catálogo de produtos, carrinho de compra
 - [ ] Checkout
 - [ ] Painel administrativo (cadastro de produtos)
 
-> Atualize esta lista conforme as fases do roadmap forem concluídas.
-
 ## Estrutura do projeto
 
 ```
