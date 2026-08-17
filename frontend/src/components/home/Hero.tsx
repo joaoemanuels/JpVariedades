@@ -4,7 +4,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ image }: HeroSectionProps) {
   return (
-    <section className="w-full px-4 md:px-6">
+    <section className="w-full px-4 md:px-6 mt-5">
       <div className="relative mx-auto h-71.25 w-full max-w-350 overflow-hidden rounded-xl">
         <img
           src={image}
