@@ -1,30 +1,5 @@
-interface ProdutoRelacionado {
-  id: string;
-  nome: string;
-  imagem: string;
-  preco: number;
-  novo?: boolean;
-}
-
-const produtosRelacionados: ProdutoRelacionado[] = [
-  {
-    id: "1",
-    nome: "Vaso Cerâmica Decorativo - Linha Terra",
-    imagem: "https://placehold.co/400x400/e8ddd3/7c2d12?text=Vaso",
-    preco: 65.9,
-    novo: true,
-  },
-  {
-    id: "2",
-    nome: "Kit 4 Porta Copos Cortiça Premium",
-    imagem: "https://placehold.co/400x400/e8ddd3/7c2d12?text=Porta+Copos",
-    preco: 29.9,
-  },
-];
-
-function formatarPreco(valor: number): string {
-  return valor.toLocaleString("pt-BR", { minimumFractionDigits: 2 });
-}
+import { produtosRelacionados, type ProdutoRelacionado } from "../../data/database.data";
+import { formatarPreco } from "../../utils/formatarPrecoFrete";
 
 function ProdutoRelacionadoCard({
   produto,
@@ -70,7 +45,6 @@ function ProdutoRelacionadoCard({
 
 export default function ProdutosRelacionados() {
   function adicionarAoCarrinho(id: string) {
-    // integração com o estado/contexto do carrinho entra aqui
     console.log("Adicionar ao carrinho", id);
   }
 

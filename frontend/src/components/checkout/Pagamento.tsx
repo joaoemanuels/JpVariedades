@@ -1,15 +1,9 @@
 import { CreditCard, QrCode, Wallet } from "lucide-react";
 import { formatarNumeroCartao } from "../../utils/formatarNumeroCartao";
 import { formatarValidade } from "../../utils/formatarValidade";
+import type { CartaoForm } from "../../types/checkout";
 
 export type MetodoPagamento = "cartao" | "pix";
-
-export interface CartaoForm {
-  numero: string;
-  nomeImpresso: string;
-  validade: string;
-  cvv: string;
-}
 
 interface PagamentoProps {
   metodoSelecionado: MetodoPagamento;

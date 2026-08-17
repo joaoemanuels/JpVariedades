@@ -1,12 +1,6 @@
 import { Truck } from "lucide-react";
 import { formatarPreco } from "../../utils/formatarPrecoFrete";
-
-export interface OpcaoFrete {
-  id: string;
-  nome: string;
-  prazo: string;
-  preco: number;
-}
+import type { OpcaoFrete } from "../../types/checkout";
 
 interface OpcoesFreteProps {
   opcoes: OpcaoFrete[];

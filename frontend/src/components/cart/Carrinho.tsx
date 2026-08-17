@@ -2,25 +2,7 @@ import { useState } from "react";
 import type { ItemCarrinho } from "./CarrinhoItem";
 import CarrinhoItem from "./CarrinhoItem";
 import ResumoPedido from "./ResumoPedido";
-
-const itensIniciais: ItemCarrinho[] = [
-  {
-    id: "1",
-    nome: "Luminária de Mesa Cerâmica Moderna - Bordeaux",
-    imagem: "https://placehold.co/200x200/e8ddd3/7c2d12?text=Luminária",
-    preco: 149.9,
-    quantidade: 1,
-    prontaEntrega: true,
-  },
-  {
-    id: "2",
-    nome: "Jogo de Toalhas Algodão Orgânico 5 Peças",
-    imagem: "https://placehold.co/200x200/e8ddd3/7c2d12?text=Toalhas",
-    preco: 89.9,
-    quantidade: 1,
-    prontaEntrega: true,
-  },
-];
+import { itensIniciais } from "../../data/database.data";
 
 const DESCONTO = 0;
 const FRETE_GRATIS = true;
@@ -54,6 +36,7 @@ export default function Carrinho() {
     (soma, item) => soma + item.quantidade,
     0,
   );
+
   const subtotal = itens.reduce(
     (soma, item) => soma + item.preco * item.quantidade,
     0,

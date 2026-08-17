@@ -1,13 +1,7 @@
 import { MapPin } from "lucide-react";
 import { useState } from "react";
 import { formatarCep } from "../../utils/formatarCep";
-
-export interface EnderecoForm {
-  cep: string;
-  endereco: string;
-  numero: string;
-  complemento: string;
-}
+import type { EnderecoForm } from "../../types/checkout";
 
 interface EnderecoEntregaProps {
   valores: EnderecoForm;

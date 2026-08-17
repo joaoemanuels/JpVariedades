@@ -1,4 +1,5 @@
 import { Heart, Search, ShoppingCart, Sparkles, UserRound } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Header() {
   return (
@@ -39,8 +40,8 @@ export function Header() {
             <Heart size={21} strokeWidth={1.8} />
           </button>
 
-          <button
-            type="button"
+          <Link
+            to="/carrinho"
             aria-label="Carrinho"
             className="relative flex h-9 w-7 items-center justify-center text-[#6f2f13] transition hover:text-[#9b421c]"
           >
@@ -49,7 +50,7 @@ export function Header() {
             <span className="absolute -right-2 -top-1 flex h-4.25 min-w-4.25 items-center justify-center rounded-full bg-[#b94716] px-1 text-[10px] font-bold text-white">
               3
             </span>
-          </button>
+          </Link>
 
           <button
             type="button"

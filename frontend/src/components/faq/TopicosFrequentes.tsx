@@ -1,4 +1,3 @@
-import type { LucideIcon } from "lucide-react";
 import {
   ArrowLeftRight,
   CreditCard,
@@ -7,16 +6,7 @@ import {
   Truck,
   UserCog,
 } from "lucide-react";
-
-export interface TopicoAjuda {
-  id: string;
-  titulo: string;
-  descricao: string;
-  icone: LucideIcon;
-  corIcone: string;
-  corFundoIcone: string;
-  href: string;
-}
+import type { TopicoAjuda } from "../../types/ajuda";
 
 const topicos: TopicoAjuda[] = [
   {

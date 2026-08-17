@@ -1,4 +1,5 @@
 import { Minus, Plus } from "lucide-react";
+import { formatarPreco } from "../../utils/formatarPrecoFrete";
 
 export interface ItemCarrinho {
   id: string;
@@ -13,10 +14,6 @@ interface CarrinhoItemProps {
   item: ItemCarrinho;
   onAumentarQuantidade: (id: string) => void;
   onDiminuirQuantidade: (id: string) => void;
-}
-
-function formatarPreco(valor: number): string {
-  return valor.toLocaleString("pt-BR", { minimumFractionDigits: 2 });
 }
 
 export default function CarrinhoItem({

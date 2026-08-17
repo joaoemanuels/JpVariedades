@@ -1,4 +1,6 @@
 import { Lock } from "lucide-react";
+import { Link } from "react-router-dom";
+import { formatarPreco } from "../../utils/formatarPrecoFrete";
 
 interface ResumoPedidoProps {
   quantidadeItens: number;
@@ -6,10 +8,6 @@ interface ResumoPedidoProps {
   desconto: number;
   freteGratis: boolean;
   onFinalizarCompra: () => void;
-}
-
-function formatarPreco(valor: number): string {
-  return valor.toLocaleString("pt-BR", { minimumFractionDigits: 2 });
 }
 
 export default function ResumoPedido({
@@ -56,13 +54,14 @@ export default function ResumoPedido({
         </span>
       </div>
 
-      <button
+      <Link
         type="button"
+        to="/checkout"
         onClick={onFinalizarCompra}
         className="w-full rounded-lg bg-[#7c2d12] py-3 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-[#6b2610]"
       >
         Finalizar Compra
-      </button>
+      </Link>
 
       <p className="flex items-center justify-center gap-1.5 text-xs text-stone-500">
         <Lock className="h-3.5 w-3.5" />

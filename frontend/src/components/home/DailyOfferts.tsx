@@ -1,49 +1,6 @@
 import { ChevronRight } from "lucide-react";
 import { formatPrice } from "../../utils/formatPrice";
-
-interface Oferta {
-  id: string;
-  nome: string;
-  imagem: string;
-  precoAntigo: number;
-  precoAtual: number;
-  descontoPercentual: number;
-}
-
-const ofertas: Oferta[] = [
-  {
-    id: "1",
-    nome: "Caneca Cerâmica Terracota Minimalista 350ml",
-    imagem: "https://placehold.co/400x400/e8ddd3/7c2d12?text=Caneca",
-    precoAntigo: 49.9,
-    precoAtual: 29.9,
-    descontoPercentual: 40,
-  },
-  {
-    id: "2",
-    nome: "Luminária de Mesa Aço Escovado Articulada",
-    imagem: "https://placehold.co/400x400/e8ddd3/7c2d12?text=Luminária",
-    precoAntigo: 159.9,
-    precoAtual: 119.9,
-    descontoPercentual: 25,
-  },
-  {
-    id: "3",
-    nome: "Jogo de Toalhas Algodão Premium 5 Peças",
-    imagem: "https://placehold.co/400x400/e8ddd3/7c2d12?text=Toalhas",
-    precoAntigo: 129.9,
-    precoAtual: 109.9,
-    descontoPercentual: 15,
-  },
-  {
-    id: "4",
-    nome: "Vaso Decorativo Cimento Queimado Grande",
-    imagem: "https://placehold.co/400x400/e8ddd3/7c2d12?text=Vaso",
-    precoAntigo: 199.9,
-    precoAtual: 99.9,
-    descontoPercentual: 50,
-  },
-];
+import { ofertas, type Oferta } from "../../data/database.data";
 
 function OfertaCard({ oferta }: { oferta: Oferta }) {
   return (

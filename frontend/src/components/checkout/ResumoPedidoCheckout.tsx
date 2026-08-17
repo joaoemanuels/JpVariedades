@@ -1,16 +1,9 @@
 import { Lock, ShieldCheck } from "lucide-react";
 import { formatarPreco } from "../../utils/formatarPrecoFrete";
-
-export interface ItemResumoCheckout {
-  id: string;
-  nome: string;
-  imagem: string;
-  preco: number;
-  quantidade: number;
-}
+import type { ItemCarrinho } from "../../types/carrinho";
 
 interface ResumoPedidoCheckoutProps {
-  itens: ItemResumoCheckout[];
+  itens: ItemCarrinho[];
   frete: number;
   onFinalizarCompra: () => void;
 }
