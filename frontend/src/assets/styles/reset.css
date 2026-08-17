@@ -1,65 +1,78 @@
+@import "tailwindcss";
+
+/* Box model */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-body {
-  min-height: 100vh;
-  line-height: 1.5;
-  background-color: 161616;
-  font-family: "Inter", "Arial", sans-serif;
-  color: #111;
+/* Remove espaçamentos padrão */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
 
 ul,
 ol {
-  list-style: none;
   padding: 0;
+  list-style: none;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+/* Imagens */
+img,
+picture,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+/* Formulários — apenas estrutura */
+button,
+input,
+textarea,
+select {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-input,
-button,
-textarea,
-select {
-  border: none;
-  outline: none;
-  font-family: inherit;
-  font-size: inherit;
-  background: none;
-  color: inherit;
-}
-
+/* Botões */
 button {
   cursor: pointer;
-  background: none;
-  border: none;
 }
 
+/* Tabelas */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-fieldset,
-legend {
+/* Fieldsets */
+fieldset {
+  margin: 0;
+  padding: 0;
   border: 0;
 }
 
+/* Citações */
 blockquote,
 q {
   quotes: none;
